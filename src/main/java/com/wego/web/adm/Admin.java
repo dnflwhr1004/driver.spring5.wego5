@@ -13,5 +13,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Admin {
 	private String eid, pwd, eName,job,mgr,hireDate,sal,cmm,dept;
-
+	//ㅇㅂㅇ
 }
