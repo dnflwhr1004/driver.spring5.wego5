@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
-public class CmmCtrl {
+public class CommonCtrl {
 	
-	private static final Logger logger = LoggerFactory.getLogger(CmmCtrl.class);
+	private static final Logger logger = LoggerFactory.getLogger(CommonCtrl.class);
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
