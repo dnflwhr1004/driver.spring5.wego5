@@ -1,11 +1,14 @@
 package com.wego.web.usr;
 
-import java.util.HashMap;
 import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,12 +36,31 @@ public class UserCtrl {
 		return "SUCCESS";
 		
 	}
-		
-	
-	@PostMapping("/login")
-	public User login(@RequestBody User param){
+				
+	@PostMapping("/{uid}")
+	public User login(@PathVariable String uid,@RequestBody User param){
 		IFunction<User,User> f =  t->userMapper.selectByIdPw(param);
 		return f.apply(param);
+	}
+	
+	@GetMapping("/{uid}")
+	public User searchUserById(@PathVariable String uid,@RequestBody User param) {
+		IFunction<User,User> f =  t->userMapper.selectByIdPw(param);
+		return f.apply(param);
+	}
+	
+	@PutMapping("/{uid}")
+	public String updateUser(@PathVariable String uid,@RequestBody User param) {
+		IConsumer<User> c = t->userMapper.insertUser(param);
+		c.accept(param);
+		return "SUCCESS";
+	}
+	
+	@DeleteMapping("/{uid}")
+	public String removeUser(@PathVariable String uid,@RequestBody User param) {
+		IConsumer<User> c = t->userMapper.insertUser(param);
+		c.accept(param);
+		return "SUCCESS";
 	}
 	
 }
