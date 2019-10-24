@@ -31,17 +31,21 @@ auth = (()=>{
                 e.preventDefault();
                 let data = {uid:$('#uid').val(),pwd:$('#pwd').val(),uname:$('#uname').val()}
                 $.ajax({
-                    url:_+'/user/join',
+                    url:_+'/users/',
                     type: 'POST',
                     dataType:'json',
                     data : JSON.stringify(data),
                     contentType : 'application/json',
                     success : d =>{
-                        alert('에이작스 아이디'+ d.uid+','+'비밀번호'+d.pwd+','+'이름'+d.uname);    
-                        login()
+                        alert('AJAX 성공 : '+ d.msg)
+                        if(d.msg ==='SUCCESS')
+                        	login()
+                        	else
+                        		alert('회원가입실패');
+                       
                     },
                     error : e =>{
-                        alert('에이작스실패');
+                        alert('AJAX실패');
                     }
                 })
             }
