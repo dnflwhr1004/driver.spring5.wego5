@@ -13,6 +13,13 @@ function Session(x) {
 	}
 	
 }
-function User() {
+function User(u) {
+	sessionStoage.setItem('uid',u.uid);
+	sessionStoage.setItem('uname',u.uname);
 	
+	return {
+		uid : ()=>{return sessionStorage.getItem('uid');},
+		uname : ()=>{return sessionStorage.getItem('uname');}
+		
+	}
 }

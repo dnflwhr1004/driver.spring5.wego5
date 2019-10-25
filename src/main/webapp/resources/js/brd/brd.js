@@ -2,6 +2,10 @@
 var brd = brd ||{}
 brd = (()=>{
     let _, js, brd_vue_js
+    let run =u=>$.getScript(u+'/resources/js/cmm/router.js',
+    		()=>{$.extend(new Session(u));
+    		onCreate();	
+    		});
     let init =()=>{
         _ = $.ctx()
        js = $.js()

@@ -158,7 +158,7 @@ brd_vue = {
 		  return '<div class="container-fluid" style="width:80%">'
 		  +'<h1>ARTICLE WRITING</h1>'
 		  +'<form>'
-		  +'<input type="text" name="writer" style="margin-top:20px" class="form-control" placeholder="작성자 이름" />'
+		  +'<input id="uid" type="text" name="writer" style="margin-top:20px" class="form-control" placeholder="작성자 이름" />'
 		  +'<input type="text" name="title" style="margin-top:20px" class="form-control" placeholder="제목" /><br />'
 		  +'<div class="row">'
 		  +'<div style="width:97%; margin:10px auto" >'

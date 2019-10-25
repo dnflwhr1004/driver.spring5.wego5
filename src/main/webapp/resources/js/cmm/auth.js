@@ -2,12 +2,13 @@
 var auth = auth || {}
 auth = (()=>{
 	const WHEN_ERR = '호출하는 JS 파일을 찾지 못했습니다.'
-    let _, js, auth_vue_js ,brd_vue_js
+    let _, js, auth_vue_js ,brd_vue_js, router_js
     let init = ()=>{
         _ = $.ctx()
         js = $.js()
         auth_vue_js = js+'/vue/auth_vue.js'
         brd_vue_js = js+'/vue/brd_vue.js'
+        router_js = js+'/cmm/router.js'
     }
 
     let onCreate =()=>{
