@@ -13,3 +13,6 @@ function Session(x) {
 	}
 	
 }
+function User() {
+	
+}
