@@ -3,5 +3,4 @@ package com.wego.web.cmm;
 public interface IFunction<T,R> {
 
 	public R apply(T t);
-	
 }

@@ -54,13 +54,6 @@ public class UserCtrl {
        return f.apply(param);
     }
 
-	@GetMapping("/{uid}")
-
-	public User selectByIdPw(@PathVariable String uid , @RequestBody User param) {
-		IFunction<User,User> f = t -> userMapper.selectByIdPw(param);
-		return f.apply(param);
-	}
-
 	@PutMapping("/{uid}")
 
 	public Map<?,?> updateUser(@PathVariable String uid , @RequestBody User param) {

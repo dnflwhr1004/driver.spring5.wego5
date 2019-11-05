@@ -10,7 +10,7 @@ auth_vue = {
         '    <title>Checkout example · Bootstrap</title>'+
         '    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">'+
         '    <!-- Bootstrap core CSS -->'+
-        '<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">'+
+        '<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">'+
         '    <style>'+
         '      .bd-placeholder-img {'+
         '        font-size: 1.125rem;'+
@@ -86,37 +86,35 @@ auth_vue = {
         '      </form>'+
         '    </div>'+
         '    <div class="col-md-8 order-md-1">'+
-        '      <h4 class="mb-3">회원가입</h4>'+
+        '      <h4 class="mb-3">회원 가입</h4>'+
         '      <form class="needs-validation" novalidate="">'+
         '        <div class="row">'+
         '          <div class="col-md-6 mb-3">'+
-        '            <label for="uid">아이디</label>'+
-        '            <input type="text" class="form-control" id="uid" placeholder="" value="" required="">'+
+        '            <label for="userid">USERID</label>'+
+        '            <input type="text" class="form-control" id="userid" placeholder="" value="" required="">'+
         '            <div class="invalid-feedback">'+
         '              Valid first name is required.'+
         '            </div>'+
         '          </div>'+
         '          <div class="col-md-6 mb-3">'+
-        '            <label for="pwd">ID 중복체크</label>'+
+        '            <label for="password">ID 중복체크</label>'+
         '            <input type="text" class="form-control" id="dupl_check" placeholder="" value="" required="">'+
         '            <div class="invalid-feedback">'+
         '              Valid last name is required.'+
         '            </div>'+
         '          </div>'+
         '        </div>'+
-      
         '        <div class="mb-3">'+
-        '          <label for="address2">비밀번호 <span class="text-muted"></span></label>'+
-        '          <input type="text" class="form-control" id="pwd" >'+
+        '          <label for="address2">비밀번호 <span class="text-muted">(Optional)</span></label>'+
+        '          <input type="text" class="form-control" id="password" placeholder="Apartment or suite">'+
         '        </div>'+
-        
         '        <div class="mb-3">'+
-        '          <label for="uname">이름</label>'+
+        '          <label for="username">Username</label>'+
         '          <div class="input-group">'+
         '            <div class="input-group-prepend">'+
-      
+        '              <span class="input-group-text">@</span>'+
         '            </div>'+
-        '            <input type="text" class="form-control" id="uname" placeholder="" required="">'+
+        '            <input type="text" class="form-control" id="username" placeholder="Username" required="">'+
         '            <div class="invalid-feedback" style="width: 100%;">'+
         '              Your username is required.'+
         '            </div>'+
@@ -136,7 +134,6 @@ auth_vue = {
         '            Please enter your shipping address.'+
         '          </div>'+
         '        </div>'+
-      
         '        <div class="row">'+
         '          <div class="col-md-5 mb-3">'+
         '            <label for="country">Country</label>'+
@@ -245,8 +242,8 @@ auth_vue = {
 		'  <title>Document</title>'+
 		'  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">'+
 		'  <head>  '+
-		 '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">'+
-		'  <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">'+
+		 '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  crossorigin="anonymous">'+
+		'  <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">'+
 		'    <meta charset="utf-8">'+
 		'    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'+
 		'    <meta name="description" content="">'+
@@ -279,12 +276,15 @@ auth_vue = {
 		'    <img class="mb-4" src="'+x.img+'/bootstrap-solid.svg" alt="" width="72" height="72">'+
 		'    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>'+
 		'    <label for="inputEmail" class="sr-only">Email address</label>'+
-		'    <input type="text" id="uid" class="form-control" placeholder="Email address" required="" autofocus="">'+
+		'    <input type="text" id="uid" value="ddd" class="form-control" placeholder="Email address" required="" autofocus="">'+
 		'    <label for="inputPassword" class="sr-only">Password</label>'+
-		'    <input type="password" id="pwd" class="form-control" placeholder="Password" required="">'+
+		'    <input type="password" id="pwd" value="ddd" class="form-control" placeholder="Password" required="">'+
 		'    <div class="checkbox mb-3">'+
 		'      <label>'+
 		'      <a id = "a_go_join" href="#">GO JOIN</a>'+
+		'      </label>'+
+		'      <label>'+
+		'      <a id = "a_go_admin" href="#">GO admin</a>'+
 		'      </label>'+
 		'    </div>'+
 		'    <div id="btn_login"></div>'+
